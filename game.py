@@ -18,14 +18,14 @@ def payout_winner(app_id, user1_uid, user2_uid, winner_addr, note1, note2):
     url = "https://dropchain1.p.rapidapi.com/dropchain/v1/atomic_swap_algo"
 
     payload = {
-	    "app_id": app_id,
-	    "user1_uid": user1_uid,
+	"app_id": app_id,
+	"user1_uid": user1_uid,
         "user2_uid": user2_uid,
-	    "receiver1_address": winner_addr,
+	"receiver1_address": winner_addr,
         "receiver2_address": winner_addr,
-	    "asset1_amount_int": "100000", # this amount can be changed based on the wager for the game
+	"asset1_amount_int": "100000", # this amount can be changed based on the wager for the game
         "asset2_amount_int": "100000",
-	    "transaction1_note": note1,
+	"transaction1_note": note1,
         "transaction2_note": note2
     }
     headers = {
