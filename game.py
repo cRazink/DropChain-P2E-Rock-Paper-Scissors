@@ -73,23 +73,18 @@ import requests, json
 # grabbed from DropChain test user accounts
 user1_uid = "<your Test User ID 1>" # test user uid 1 
 user2_uid = "<your Test User ID 2>" # test user uid 2  
-user1_algo_addr = "<your Algo Address Test User 1>" # test user 1 algorand addr
-user2_algo_addr = "<your Algo Address Test User 2>" # test user 2 algorand addr
 app_id = "<your App ID>" # app_id 
 
-# The entire function is taken from RapidAPI's Python "request" example. 
-# It takes in inputs from above (that you would customize in the event of your game) 
-# and conducts a DropChain API call for your players.
 run_count = 0
 
-def payout_winner(app_id, user1_uid, winner_addr, note): 
+def payout_winner(app_id, user1_uid, winner_uid, note): 
 
     url = "https://dropchain1.p.rapidapi.com/dropchain/v1/send_algo"
 
     payload = {
 	"app_id": app_id,
         "user1_uid": user1_uid,
-        "receiver1_address": winner_addr,
+        "receiver1_uid": winner_uid,
         "asset1_amount_int": "100000", # this amount can be changed based on the wager for the game
         "transaction1_note": note
     }
