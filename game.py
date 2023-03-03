@@ -79,7 +79,7 @@ run_count = 0
 
 def payout_winner(app_id, user1_uid, winner_uid, note): 
 
-    url = "https://dropchain1.p.rapidapi.com/dropchain/v1/send_algo"
+    url = "https://dropchain1.p.rapidapi.com/dropchain/v1/send_algo_testnet"
 
     payload = {
 	"app_id": app_id,
