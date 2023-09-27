@@ -92,7 +92,7 @@ def payout_winner(app_id, user1_uid, winner_uid, note):
     }
     headers = {
 	    "content-type": "application/json",
-	    "X-API-Key": "<Your DropChain API account Key>", # taken from your DropChain API dashboard
+	    "X-API-Key": "<Your DropChain developer account API Key>", # taken from your DropChain API dashboard
     }
 
     # ensure function runs 1 time — fixes demo when winner() is called multiple times
