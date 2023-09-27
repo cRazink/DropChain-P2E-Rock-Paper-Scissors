@@ -73,8 +73,6 @@ import requests, json
 # grabbed from DropChain test user accounts
 user1_uid = "<your Test User ID 1>" # test user uid 1 
 user2_uid = "<your Test User ID 2>" # test user uid 2  
-user1_wallet_addr = "<your Test User 1 Wallet Address>" # test user 1 wallet addr
-user2_wallet_addr = "<your Test User 2 Wallet Address>" # test user 2 wallet addr
 app_id = "<your App ID>" # app_id 
 
 run_count = 0
@@ -105,5 +103,4 @@ def payout_winner(app_id, user1_uid, winner_uid, note):
         return response
     else:
         return
-
 # [ End DropChain API Integrations ]
