@@ -37,30 +37,30 @@ class Game:
         # add winning conditions, grab winning address, post to blockchain
         if p1 == "R" and p2 == "S":
             winner = 0
-            winner_addr = user1_wallet_addr
+            winner_uid = user1_uid
             loser_uid = user2_uid
         elif p1 == "S" and p2 == "R":
             winner = 1
-            winner_addr = user2_wallet_addr
+            winner_uid = user2_uid
             loser_uid = user1_uid
         elif p1 == "P" and p2 == "R":
             winner = 0
-            winner_addr = user1_wallet_addr
+            winner_uid = user1_uid
             loser_uid = user2_uid
         elif p1 == "R" and p2 == "P":
             winner = 1
-            winner_addr = user2_wallet_addr
+            winner_uid = user2_uid
             loser_uid = user1_uid
         elif p1 == "S" and p2 == "P":
             winner = 0
-            winner_addr = user1_wallet_addr
+            winner_uid = user1_uid
             loser_uid = user2_uid
         elif p1 == "P" and p2 == "S":
             winner = 1
-            winner_addr = user2_wallet_addr
+            winner_uid = user2_uid
             loser_uid = user1_uid
         note = "Player 1 chose {0} and player 2 chose {1}.".format(p1,p2)
-        payout_winner(app_id, loser_uid, winner_addr, note)
+        payout_winner(app_id, loser_uid, winner_uid, note)
         return winner
 
     def resetWent(self):
@@ -98,7 +98,7 @@ def payout_winner(app_id, user1_uid, winner_uid, note):
     if run_count == 0:
         response = requests.request("POST", url, json=payload, headers=headers)
         run_count += 1
-        response = json.loads(response.text)
+	response = json.loads(response.text)
 	print(response)
         return response
     else:
