@@ -79,7 +79,7 @@ run_count = 0
 
 def payout_winner(app_id, user1_uid, winner_uid, note): 
 
-    url = "https://dropchain1.p.rapidapi.com/dropchain/v1/send_algo_testnet"
+    url = "https://api.dropchain.network/v1/send_algo_testnet"
 
     payload = {
 	"app_id": app_id,
@@ -90,8 +90,7 @@ def payout_winner(app_id, user1_uid, winner_uid, note):
     }
     headers = {
 	    "content-type": "application/json",
-	    "X-RapidAPI-Key": "<your RapidAPI account Key>", # taken from your RapidAPI account
-	    "X-RapidAPI-Host": "dropchain1.p.rapidapi.com"
+	    "X-API-Key": "<Your DropChain API account Key>", # taken from your DropChain API dashboard
     }
 
     # ensure function runs 1 time — fixes demo when winner() is called multiple times
