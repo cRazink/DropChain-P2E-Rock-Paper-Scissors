@@ -37,27 +37,27 @@ class Game:
         # add winning conditions, grab winning address, post to blockchain
         if p1 == "R" and p2 == "S":
             winner = 0
-            winner_addr = user1_algo_addr
+            winner_addr = user1_wallet_addr
             loser_uid = user2_uid
         elif p1 == "S" and p2 == "R":
             winner = 1
-            winner_addr = user2_algo_addr
+            winner_addr = user2_wallet_addr
             loser_uid = user1_uid
         elif p1 == "P" and p2 == "R":
             winner = 0
-            winner_addr = user1_algo_addr
+            winner_addr = user1_wallet_addr
             loser_uid = user2_uid
         elif p1 == "R" and p2 == "P":
             winner = 1
-            winner_addr = user2_algo_addr
+            winner_addr = user2_wallet_addr
             loser_uid = user1_uid
         elif p1 == "S" and p2 == "P":
             winner = 0
-            winner_addr = user1_algo_addr
+            winner_addr = user1_wallet_addr
             loser_uid = user2_uid
         elif p1 == "P" and p2 == "S":
             winner = 1
-            winner_addr = user2_algo_addr
+            winner_addr = user2_wallet_addr
             loser_uid = user1_uid
         note = "Player 1 chose {0} and player 2 chose {1}.".format(p1,p2)
         payout_winner(app_id, loser_uid, winner_addr, note)
@@ -73,6 +73,8 @@ import requests, json
 # grabbed from DropChain test user accounts
 user1_uid = "<your Test User ID 1>" # test user uid 1 
 user2_uid = "<your Test User ID 2>" # test user uid 2  
+user1_wallet_addr = "<your Test User 1 Wallet Address>" # test user 1 wallet addr
+user2_wallet_addr = "<your Test User 2 Wallet Address>" # test user 2 wallet addr
 app_id = "<your App ID>" # app_id 
 
 run_count = 0
